@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shower Pitching</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/face.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- 3D layer (space owner) -->
+  <div id="stage"></div>
+  <!-- 2D overlay layer (interaction owner) -->
+  <div id="hud"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
