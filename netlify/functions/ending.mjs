@@ -1,5 +1,5 @@
 // POST /api/ending { type, transcript, buzzwords, minTemp, worstWord } -> { type, title, lines[], signoff, translation }
-import { chat, hasKey, json, parseJson } from '../lib/llm.mjs';
+import { chat, hasKey, json, parseJson, rateLimited } from '../lib/llm.mjs';
 
 const MOCK = {
   frozen: {
@@ -18,6 +18,7 @@ const MOCK = {
 
 export default async (req) => {
   if (req.method !== 'POST') return json({ error: 'POST only' }, 405);
+  if (rateLimited(req)) return json({ error: 'Too many requests' }, 429);
   const body = await req.json().catch(() => ({}));
   // Public endpoint: accept only small, well-typed inputs.
   const type = body.type === 'funded' ? 'funded' : 'frozen';
@@ -49,6 +50,6 @@ Reply with ONLY this JSON:
     return json({ type, ...data });
   } catch (e) {
     console.error(e);
-    return json({ type, ...MOCK[type], error: String(e.message || e) });
+    return json({ type, ...MOCK[type] });
   }
 };

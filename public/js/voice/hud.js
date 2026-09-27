@@ -46,7 +46,7 @@ export function init() {
       </form>
       <div class="lobby-foot">
         <div class="lineup" hidden><div class="avatars"></div><div class="tub"></div></div>
-        <div class="note">${ICON.lock}Uses your camera and mic. Nothing is recorded or stored.</div>
+        <div class="note">${ICON.lock}Camera and audio aren't stored. Your transcript is sent to generate VC responses.</div>
       </div>
     </section>
 

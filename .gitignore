@@ -4,3 +4,4 @@ node_modules
 .gstack/
 .vercel
 deno.lock
+**/.gstack/

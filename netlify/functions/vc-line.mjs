@@ -1,5 +1,5 @@
 // POST /api/vc-line  { vcId, transcript, buzzwords, temp, elapsed } -> { vcId, text }
-import { chat, hasKey, json } from '../lib/llm.mjs';
+import { chat, hasKey, json, rateLimited } from '../lib/llm.mjs';
 import { PERSONAS, RULES } from '../lib/prompts.mjs';
 
 const MOCK = {
@@ -13,6 +13,7 @@ const MOCK = {
 
 export default async (req) => {
   if (req.method !== 'POST') return json({ error: 'POST only' }, 405);
+  if (rateLimited(req)) return json({ error: 'Too many requests' }, 429);
   const body = await req.json().catch(() => ({}));
   // Public endpoint: accept only known characters and small, well-typed inputs.
   const vcId = Object.hasOwn(PERSONAS, body.vcId) ? body.vcId : 'moat';
@@ -42,6 +43,6 @@ export default async (req) => {
     return json({ vcId, text: text.trim().replace(/^["']|["']$/g, '') });
   } catch (e) {
     console.error(e);
-    return json({ error: String(e.message || e) }, 502);
+    return json({ error: 'AI service unavailable' }, 502);
   }
 };
