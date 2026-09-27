@@ -1,5 +1,5 @@
 // Buzzwords turn into ice cubes that drop and pile up on the floor in front of the bath (space 2).
-// Look ported from samples/style-a props.js createIce. Cubes settle with the word facing the camera.
+// Cubes settle with the word facing the camera.
 import { bus } from '../bus.js';
 
 const SIZE = 0.3;

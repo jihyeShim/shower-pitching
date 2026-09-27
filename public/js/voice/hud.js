@@ -1,5 +1,5 @@
 // 2D overlay: lobby, timer, thermometer, captions, interruption card, result card (interaction owner).
-// Visual language: UI-1 "visionOS glass" (samples/ui-1).
+// Visual language: visionOS-style glass.
 import { bus } from '../bus.js';
 import { PITCH_SECONDS, START_TEMP, MIN_TEMP, DROP_PER_BUZZWORD, RISE_PER_WARMWORD, BANDS, FLAGS } from '../config.js';
 import { state } from '../state.js';

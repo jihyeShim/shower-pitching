@@ -29,7 +29,6 @@ function buildVoiceMap() {
   const en = all.filter((v) => /^en/i.test(v.lang) && !NOVELTY.test(v.name));
   const pool = (en.length ? en : all.filter((v) => /^en/i.test(v.lang))).sort((a, b) => rank(a) - rank(b));
   if (!pool.length) return null;
-  // Samantha is the demo founder's recorded voice; keep her out of the tub so the VCs never sound like the founder.
   const free = pool.filter((v) => !/samantha/i.test(v.name));
   const used = new Set();
   const take = (v) => (used.add(v), v);

@@ -1,5 +1,5 @@
 // The founder's face window: live webcam with the filter-lab shower filter, drawn on a 2D canvas overlay
-// (space owner). Filter modules are ported from samples/filter-lab into ./filter/.
+// (space owner). Filter modules live in ./filter/.
 import { bus } from '../bus.js';
 import { FLAGS, FACE_FILTER_STYLE, FILTER_BY_BAND } from '../config.js';
 import { createShowerFilter, STYLES } from './filter/shower-filter.js';

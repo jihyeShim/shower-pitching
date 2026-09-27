@@ -33,7 +33,7 @@ export const MAX_PARTICLES = 3000;
 export const BAND_COLD = { warm: 0, lukewarm: 0.34, cold: 0.67, frozen: 1 };
 export const COLD_EASE_SECONDS = 1;
 // Face window filter: 'auto' follows the temperature band (warm shampoo, lukewarm glass, cold/frozen rain),
-// or force one of 'shampoo' | 'glass' | 'rain' with ?filter= (see samples/filter-lab).
+// or force one of 'shampoo' | 'glass' | 'rain' with ?filter=.
 export const FACE_FILTER_STYLE = new URLSearchParams(location.search).get('filter') || 'auto';
 export const FILTER_BY_BAND = { warm: 'shampoo', lukewarm: 'glass', cold: 'rain', frozen: 'rain' };
 

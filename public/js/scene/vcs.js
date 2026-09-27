@@ -1,4 +1,4 @@
-// Hot bath and the VC figures (space 2). Ported from samples/style-a (bath, bath lights, steam, vinyl VCs, bubble).
+// Hot bath and the VC figures (space 2). Bath, bath lights, steam, vinyl VCs, speech bubble.
 // The bath side stays warm at every temperature: nothing here reads world.getCold().
 // Figures differ only by robe colour, prop and pose. Same face, skin and towel hat for everyone.
 import { bus } from '../bus.js';

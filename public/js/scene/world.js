@@ -1,5 +1,5 @@
 // Renderer, camera, lights, the tiled shower room and the post chain (space owner).
-// Layout and post chain from samples/style-a; warm state regraded to a bright morning shower (director, UI-1). Other scene modules receive the object
+// Warm state is a bright morning shower; cold slides to icy blue. Other scene modules receive the object
 // returned by init() and add to world.scene. Every warm/cold visual reads world.getCold() per frame.
 // View: first person from inside the founder's shower stall, looking at the VC tub.
 import * as THREE from 'three';

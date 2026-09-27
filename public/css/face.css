@@ -1,4 +1,4 @@
-/* Founder face window (drawn by scene/founder.js). Frame from samples/style-a, chip shows the water temperature. */
+/* Founder face window (drawn by scene/founder.js). Chip shows the water temperature. */
 #face {
   --chip: #ffb070;
   position: fixed; right: 24px; top: 24px; z-index: 1;

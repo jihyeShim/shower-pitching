@@ -1,6 +1,6 @@
 // The stall around the viewer, rain head overhead, water falling past the lens that turns to snow,
-// and steam in the stall and the room air (space owner). Look ported from samples/style-a props.js;
-// clear duck-print curtain from samples/style-c. Everything reads world.getCold() every frame.
+// and steam in the stall and the room air (space owner).
+// Clear duck-print curtain. Everything reads world.getCold() every frame.
 // The tub steam belongs to vcs.js (space 2).
 import * as THREE from 'three';
 import { bus } from '../bus.js';
